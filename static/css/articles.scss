@@ -1,0 +1,171 @@
+// Variables
+$primary-color: #3498db;
+$secondary-color: #002f4f;
+$text-color: #333;
+$background-color: #f4f4f4;
+
+// Styles globaux pour les articles
+h1 {
+    text-align: center;
+}
+.article-page {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    img {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 1.5rem;
+    }
+
+    h2 {
+        text-align: center;
+        color: $secondary-color;
+        margin-bottom: 2rem;
+    }
+
+    .chapter {
+        margin-bottom: 2rem;
+
+        h3 {
+            color: $secondary-color;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        h3::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: $primary-color;
+        }
+
+        p {
+            line-height: 1.8;
+            color: $text-color;
+        }
+    }
+}
+
+.article-text {
+    margin-top: 1.5rem;
+    line-height: 1.8; // Espacement agréable pour les paragraphes
+    color: $text-color; // Couleur principale du texte
+
+    p {
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem; // Taille par défaut pour une bonne lisibilité
+        text-align: justify; // Justifier le texte pour une présentation plus professionnelle
+    }
+}
+
+footer {
+    background-color: $secondary-color; // Utilise la couleur principale définie dans les variables
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+
+    p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+}
+
+.back-to-home {
+    text-align: center;
+    margin-top: 2rem;
+
+    .btn-home {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #fff;
+        background-color: #3498db; // Couleur principale
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s, transform 0.2s;
+
+        &:hover {
+            background-color: darken(#3498db, 10%);
+            transform: translateY(-3px);
+        }
+    }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+    .article-page {
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .chapter h3 {
+        font-size: 1.3rem;
+    }
+
+    .chapter p {
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    .article-text p,
+    .chapter p {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .back-to-home .btn-home {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-page {
+        padding: 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .chapter h3 {
+        font-size: 1.2rem;
+    }
+
+    .chapter p {
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.7rem;
+    }
+
+    .article-text p,
+    .chapter p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .back-to-home .btn-home {
+        font-size: 0.8rem;
+        padding: 0.6rem 1rem;
+    }
+}

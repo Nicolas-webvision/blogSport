@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogSport</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur BlogSport</h1>
+    </header>
+    <main>
+        <p>Le meilleur endroit pour découvrir les bienfaits du sport !</p>
+
+<div class="search-bar">
+    <form action="{% url 'search' %}" method="GET">
+        <input type="text" name="q" placeholder="Rechercher un article..." required>
+        <button type="submit">Rechercher</button>
+    </form>
+</div>
+
+        <section>
+            <h2>Le sport et vous</h2>
+            <div class="articles">
+                <div class="article">
+                    <h3><a href="/articles/20-raisons">20 raisons de se mettre au sport</a></h3>
+                    <img src="{% static 'images/article_image1.jpg' %}" alt="Image pour 20 raisons" />
+                    <p>Découvrez pourquoi le sport est essentiel pour votre santé physique et mentale.</p>
+                </div>
+                <div class="article">
+                    <h3><a href="/articles/bienfaits-sport">15 bienfaits du sport sur la santé</a></h3>
+                    <img src="{% static 'images/article_image2.jpg' %}" alt="Image pour bienfaits du sport" />
+                    <p>Explorez les avantages incroyables que le sport peut avoir sur votre vie quotidienne.</p>
+                </div>
+                <div class="article">
+                    <h3><a href="/articles/conseils-debutant">10 conseils pour les débutants</a></h3>
+                    <img src="{% static 'images/article_image3.jpg' %}" alt="Image pour conseils débutant" />
+                    <p>Vous commencez une activité physique ? Voici les meilleurs conseils pour bien démarrer.</p>
+                </div>
+                <div class="article">
+                    <h3><a href="/articles/rester-motive">Comment rester motivé pour faire du sport</a></h3>
+                    <img src="{% static 'images/article_image4.jpg' %}" alt="Image pour rester motivé" />
+                    <p>Astuces et conseils pratiques pour garder la motivation et faire du sport régulièrement, même pendant les périodes difficiles.</p>
+                </div>
+                <div class="article">
+                    <h3><a href="/articles/bruler-calories">Les meilleures activités pour brûler des calories</a></h3>
+                    <img src="{% static 'images/article_image5.jpg' %}" alt="Image pour brûler des calories" />
+                    <p>Découvrez quelles activités physiques sont les plus efficaces pour brûler des calories et atteindre vos objectifs.</p>
+                </div>
+                <div class="article">
+                    <h3><a href="/articles/etirements">L'importance des étirements après l'exercice</a></h3>
+                    <img src="{% static 'images/article_image6.jpg' %}" alt="Image pour les étirements" />
+                    <p>Découvrez pourquoi les étirements sont essentiels pour éviter les blessures et améliorer la récupération après le sport.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+<footer>
+    <p>&copy; 2024 BlogSport. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
+
+

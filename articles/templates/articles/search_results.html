@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats de recherche</title>
+    <link rel="stylesheet" href="{% static 'css/search-bar.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Résultats pour "{{ query }}"</h1>
+    </header>
+    <main>
+    {% if results %}
+        <section class="results">
+            <h2>Résultats de recherche</h2>
+            <ul>
+                {% for article in results %}
+                    <li>
+                        <a href="{{ article.url }}">{{ article.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% else %}
+        <section class="no-results">
+            <h2>Aucun résultat</h2>
+            <p>Aucun résultat trouvé pour "{{ query }}".</p>
+        </section>
+    {% endif %}
+</main>
+</body>
+</html>
